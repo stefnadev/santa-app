@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
+        <link rel="stylesheet" href="main.css"></link>
+        <script src="jquery.min.js"></script>
         <script src="main.js"></script>
         <!-- cordova -->
         <script type="text/javascript" src="phonegap.js"></script>
@@ -12,17 +14,16 @@
 	<body>
         <!-- Facebook JavaScript -->
         <div id="fb-root"></div>
-        <a onclick="promptLogin()" class="login-button">
-            <span>Login</span>
-        </a>
-        <a onclick="updateUserInfo()" class="me-button">
-            <span>Me</span>
-        </a>
+        <header></header>
+        <section>
+            <a id="login"></a>
+            <div id="info">Hæ, Einar Tryggvi</div>
+        </section>
+        <footer></footer>
         <!-- Facebook JavaScript -->
         <script type="text/javascript">
             document.addEventListener('deviceready', function() {
                 // window.fbAsyncInit = function() {
-                console.log('here')
                 FB.init({
                     appId: '397091623704711',
                     nativeInterface: CDV.FB,

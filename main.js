@@ -2,8 +2,10 @@
 function handleStatusChange(response) {
     if (response.authResponse) {
         alert(JSON.stringify(response));
+        $('#login').show();
         updateUserInfo(response);
     } else {
+        $('#login').hide();
         alert(JSON.stringify(response));
     }
 }
@@ -18,8 +20,7 @@ function updateUserInfo(response) {
     FB.api('/me',
         {fields: "name,first_name,picture"},
         function (response) {
-            console.log(response);
-            alert(JSON.stringify(response));
+            $('#info').html('Hæ, ' + response.name).show();
         });
 }
 
@@ -42,3 +43,9 @@ function reauthorizeForPublishPermissions() {
         }, {scope: 'publish_actions'}
     );
 }
+
+$(function() {
+    $('#login').click(function() {
+        promptLogin();
+    });
+});
