@@ -1,11 +1,10 @@
 // Handle status changes
 function handleStatusChange(response) {
     if (response.authResponse) {
-        alert(response);
-        window.location.hash = '#menu';
+        alert(JSON.stringify(response));
         updateUserInfo(response);
     } else {
-        alert(response);
+        alert(JSON.stringify(response));
     }
 }
 
@@ -18,11 +17,12 @@ function updateUserInfo(response) {
         {fields: "name,first_name,picture"},
         function (response) {
             console.log(response);
-            alert(response);
+            alert(JSON.stringify(response));
         });
 }
 
 function handleGenericError(e) {
+    alert(JSON.stringify(response));
     console.log("Error ..." + JSON.stringify(e));
 }
 
@@ -35,7 +35,7 @@ function reauthorizeForPublishPermissions() {
             if (!response || response.error) {
                 handleGenericError(response.error);
             } else {
-                publishOGAction(response);
+                alert(JSON.stringify(response));
             }
         }, {scope: 'publish_actions'}
     );
