@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+	xmlns:gap = "http://phonegap.com/ns/1.0"
+	id = "is.stefna.santa"
+	version = "1.0.0">
+
+	<content src="https://www.stefna.is/is/jolaleikur" />
+    
+	<name>Santa</name>
+
+	<description>
+		Christmas game.
+	</description>
+
+	<author href="http://www.stefna.is" email="stefna@stefna.is">Stefna software</author>
+
+	<access origin="*" />
+
+	<gap:url-scheme><scheme>is.stefna.santa</scheme></gap:url-scheme>
+
+    <gap:platforms>
+	    <gap:platform name="ios" />
+	    <gap:platform name="android" />
+    </gap:platforms>
+
+    <gap:plugin name="com.phonegap.plugin.statusbar" />
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.dialogs" />
+    <gap:plugin name="com.phonegap.plugins.facebookconnect">
+	    <param name="APP_ID" value="397091623704711" />
+	    <param name="APP_NAME" value="Jólaleikur Stefnu" />
+    </gap:plugin>
+
+	<preference name="phonegap-version" value="3.1.0" />
+
+	<preference name="orientation" value="portrait" />
+	<preference name="target-device" value="handset" />
+	<preference name="webviewbounce" value="false" />
+	<preference name="HideKeyboardFormAccessoryBar" value="false" />
+	<preference name="KeyboardShrinksView" value="false" />
+	<preference name="android-installLocation" value="auto" />
+	<preference name="auto-hide-splash-screen" value="false" />
+	<preference name="splash-screen-duration" value="100000" />
+	<preference name="permissions" value="none" />
+
+	<feature name="http://api.phonegap.com/1.0/device"/>
+	<feature name="http://api.phonegap.com/1.0/network"/>
+	<feature name="http://api.phonegap.com/1.0/notification"/>
+</widget>
