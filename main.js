@@ -9,7 +9,9 @@ function handleStatusChange(response) {
 }
 
 function promptLogin() {
-    FB.login(null, {scope: 'email'});
+    FB.login(function(response) {
+        alert(JSON.stringify(response));
+    }, {scope: 'email'});
 }
 
 function updateUserInfo(response) {
