@@ -1,12 +1,11 @@
 // Handle status changes
 function handleStatusChange(response) {
     if (response.authResponse) {
-        console.log(response);
+        alert(response);
         window.location.hash = '#menu';
         updateUserInfo(response);
     } else {
-        console.log(response);
-        window.location.hash = '#login';
+        alert(response);
     }
 }
 
