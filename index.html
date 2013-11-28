@@ -23,7 +23,6 @@
 		<script src="facebook-js-sdk.js"></script>
         
 		<script>
-             <!-- These are the notifications that are displayed to the user through pop-ups if the above JS files does not exist in the same directory-->
             if (typeof CDV == 'undefined') alert('CDV variable does not exist. Check that you have included cdv-plugin-fb-connect.js correctly');
             if (typeof FB == 'undefined') alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
             
@@ -144,7 +143,7 @@
             document.addEventListener('deviceready', function() {
                                       try {
                                       alert('Device is ready! Make sure you set your app_id below this alert.');
-                                      FB.init({ appId: "appid", nativeInterface: CDV.FB, useCachedDialogs: false });
+                                      FB.init({ appId: "397091623704711", nativeInterface: CDV.FB, useCachedDialogs: false });
                                       document.getElementById('data').innerHTML = "";
                                       } catch (e) {
                                       alert(e);
