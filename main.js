@@ -1,6 +1,5 @@
 // Handle status changes
 function handleStatusChange(response) {
-    alert(JSON.stringify(response));
     if (response.authResponse) {
         $('#login').addClass('hide');
         updateUserInfo(response);
@@ -12,7 +11,6 @@ function handleStatusChange(response) {
 
 function promptLogin() {
     FB.login(function(response) {
-        alert(JSON.stringify(response));
     }, {scope: 'email'});
 }
 
