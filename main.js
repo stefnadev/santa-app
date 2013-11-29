@@ -25,7 +25,6 @@ function updateUserInfo(response) {
 }
 
 function handleGenericError(e) {
-    alert(JSON.stringify(response));
     console.log("Error ..." + JSON.stringify(e));
 }
 
@@ -38,7 +37,6 @@ function reauthorizeForPublishPermissions() {
             if (!response || response.error) {
                 handleGenericError(response.error);
             } else {
-                alert(JSON.stringify(response));
             }
         }, {scope: 'publish_actions'}
     );
