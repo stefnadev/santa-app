@@ -16,13 +16,14 @@
         <div id="fb-root"></div>
         <header></header>
         <section>
-            <a id="login"></a>
-            <div id="info">Hæ, Einar Tryggvi</div>
+            <a id="login" class="hide"></a>
+            <div id="info" class="hide">Hæ, Einar Tryggvi</div>
         </section>
         <footer></footer>
         <!-- Facebook JavaScript -->
         <script type="text/javascript">
             document.addEventListener('deviceready', function() {
+                alert('deviceready');
                 // window.fbAsyncInit = function() {
                 FB.init({
                     appId: '397091623704711',

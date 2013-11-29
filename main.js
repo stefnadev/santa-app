@@ -1,12 +1,14 @@
 // Handle status changes
 function handleStatusChange(response) {
+    alert(JSON.stringify(response));
     if (response.authResponse) {
-        alert(JSON.stringify(response));
-        $('#login').hide();
+        alert('logged in');
+        $('#login').addClass('hide');
         updateUserInfo(response);
-    } else {
-        $('#login').show();
-        alert(JSON.stringify(response));
+    }
+    else {
+        alert('not logged in');
+        $('#login').removeClass('hide');
     }
 }
 
@@ -20,7 +22,7 @@ function updateUserInfo(response) {
     FB.api('/me',
         {fields: "name,first_name,picture"},
         function (response) {
-            $('#info').html('Hæ, ' + response.name).show();
+            $('#info').html('Hæ, ' + response.name).removeClass('hide');
         });
 }
 

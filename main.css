@@ -434,9 +434,12 @@ header {
     background: url('images/fb-bg.png') no-repeat top;
     width: 247px;
     height: 53px;
-    display: none;
+    display: block;
     margin: 0 auto;
     margin-top: 100px;
+}
+#login.hide {
+    display: none;
 }
 
 #info {
@@ -444,5 +447,8 @@ header {
     text-align: center;
     margin-top: 150px;
     font-size: 22px;
+    display: block;
+}
+#info.hide {
     display: none;
 }
