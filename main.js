@@ -2,12 +2,10 @@
 function handleStatusChange(response) {
     alert(JSON.stringify(response));
     if (response.authResponse) {
-        alert('logged in');
         $('#login').addClass('hide');
         updateUserInfo(response);
     }
     else {
-        alert('not logged in');
         $('#login').removeClass('hide');
     }
 }
