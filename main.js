@@ -2,10 +2,10 @@
 function handleStatusChange(response) {
     if (response.authResponse) {
         alert(JSON.stringify(response));
-        $('#login').show();
+        $('#login').hide();
         updateUserInfo(response);
     } else {
-        $('#login').hide();
+        $('#login').show();
         alert(JSON.stringify(response));
     }
 }
