@@ -25,7 +25,11 @@
         </footer>
         <!-- Facebook JavaScript -->
         <script type="text/javascript">
+			$(function() {
+				alert('jquery ready');
+			});
             document.addEventListener('deviceready', function() {
+				alert('deviceready');
                 // window.fbAsyncInit = function() {
                 FB.init({
                     appId: '397091623704711',
